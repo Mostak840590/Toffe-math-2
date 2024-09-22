@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FERDOS BHAI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="ENJOY FREE LIVE TV">
+    <meta name="keywords" content="LIVETV, SPORTS, MOVIES, MUSIC">
+    <meta name="author" content="Ferdos Bhai">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+    <script src="assets/js/jwplayer.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/VLV8Lp3w/avatar-1002046717675.jpg">
+    <link rel="stylesheet" type="text/css" href="./codenine_skin.css">
+    <script type='text/javascript' src='https://content.jwplatform.com/libraries/IDzF9Zmk.js'></script>
+    <style>
+        /* Added CSS for watermark */
+        #watermark {
+            position: absolute;
+            top: 10px; /* Adjust this value for vertical position */
+            right: 10px; /* Adjust this value for horizontal position */
+            z-index: 10; /* Ensure the logo appears above the video */
+            opacity: 0.7; /* Adjust the opacity of the logo */
+        }
+        #my-video {
+            position: relative; /* Ensure the video container is positioned relative for absolute positioning of watermark */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="my-video">
+        <img id="watermark"https://i.postimg.cc/qMf2prsy/20240802-005125.png" alt="Logo Watermark" />
+    </div>
+
+    <script type="text/javascript">
+        var playerInstance = jwplayer("my-video");
+
+        playerInstance.setup({
+            file: "https://bdiptv24.com/Toffeelive/live.php?id=9b35bbb302b9&e=.m3u8",
+            width: "100%",
+            height: "100%",
+            aspectratio: "16:9",
+            controls: true,
+            stretching: "uniform",
+            autostart: true,
+            allowfullscreen: true,
+            pip: true,
+            skin: {
+                name: "fredflix.style"
+            }
+        });
+
+        playerInstance.setMute(false);
+
+        playerInstance.on('play', function () {
+            playerInstance.setFullscreen(true);
+        });
+    </script>
+</body>
+
+</html>
